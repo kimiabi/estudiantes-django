@@ -1,13 +1,14 @@
 
 {% block content %}
   <h2>Estudiantes</h2>
-<em>nombre - Apellido - Carne</em>
 <ul>
     {% for estudiante in object_list %}
-      <li>{{ estudiante.nombre }} - {{ estudiante.apellido }}  - {{ estudiante.carne }} </li>
+      <li>{{ estudiante.nombre }} {{ estudiante.apellido }} - {{ estudiante.carne }} -> {{ estudiante.resultado }} </li>
     {% endfor %}
   </ul>
-<h2>Añadir estudiante</h2>
+  <br>
+  <br>
+<h4>Añadir estudiante</h4>
 
   Haga click <a href="{% url 'eadd'  %}">aquí</a> para añadir una persona.
 {% endblock content %}

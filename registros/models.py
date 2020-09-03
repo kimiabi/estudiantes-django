@@ -6,6 +6,7 @@ class Estudiante(models.Model):
     nombre = models.CharField(max_length=24)
     apellido = models.CharField(max_length=24)
     carne = models.IntegerField()
+    resultado = models.CharField(max_length=48)
 
     def __unicode__(self):
         return self.carne
@@ -16,4 +17,4 @@ class Estudiante(models.Model):
 class EstudianteForm(ModelForm):
     class Meta:
         model = Estudiante
-        fields = '__all__'
+        fields = ('nombre','apellido','carne',)
